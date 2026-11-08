@@ -121,10 +121,6 @@ int main(){
     }
 
     int choice_1;
-    
-    
-    
-
     while(1){
         printf("\n 1. Insertion \n 2. Deletion \n");
         printf("\n Enter your choice :");
