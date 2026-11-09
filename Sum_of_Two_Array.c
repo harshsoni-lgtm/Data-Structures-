@@ -1,46 +1,95 @@
 #include<stdio.h>
-//This programme is for adding two Arrays..
+#include<stdbool.h>
 
+void Validation(int r, int c,bool *b){
+    if((r>0 && r<= 10) && (c>0 && c<= 10)){
+        *b= false;
+    }
+    else{
+        *b = true;
+        printf("Please Re-Enter the Rows and Columns");
+    }
+}
+
+void Display(int r, int c, int Arr[r][c]){
+    for(int i = 0; i < r; i++){
+        for(int j = 0; j < c; j++){
+            printf("%d\t",Arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+void Sum(int R, int C, int A[R][C],int B[R][C]){
+    int Sum[R][C];
+    for(int i = 0; i < R; i++){
+        for(int j = 0; j < C; j++){
+            Sum[i][j] = A[i][j]+B[i][j];
+        }
+    }
+    printf("\n ---Displaying the Sum Matirx---\n ");
+    Display(R,C,Sum);
+}
+
+void Product(int R, int C, int A[R][C],int B[R][C]){
+    int Product[R][C];
+    for(int i = 0; i < R; i++){
+        for(int j = 0; j < C;j++){
+            Product[i][j] = A[i][j]*B[i][j];
+        }
+    }
+    printf("\n ---Displaying the Product Matirx---\n ");
+    Display(R,C,Product);
+}
 int main(){
-    int A[10][10], B[10][10];
-    int Rows, Columns;
-    printf("Enter the number of rows :\n");
-    scanf("%d",&Rows);
-    printf("Enter the number of columns :\n");
-    scanf("%d",&Columns);
+    int A[10][10], B[10][10], Rows,Columns;
+    bool t = true;
+    printf("Enter Rows & Columns < 10 and > 0\n");
+    while(t){
+        printf("Enter the number of Rows :\n ");
+        scanf("%d",&Rows);
+        printf("Enter the number of Columns :\n");
+        scanf("%d",&Columns);
 
-   
-    //Initializing array 1..
-    printf("\n ---Enter the element for Array 1--- \n");
+        Validation(Rows, Columns,&t);
+    }
+    //Initializing Array 1...
+    printf("\n ---Enter the elements of First Array---\n ");
     for(int i = 0; i < Rows; i++){
         for(int j = 0; j < Columns; j++){
             printf("Enter the element :");
             scanf("%d",&A[i][j]);
-        }}
+        }
+    }
 
-    //Initializing Array 2..
-    printf("\n ---Enter the element for Array 2--- \n");
-    for(int j = 0; j < Rows; j++){
-        for(int i = 0; i < Columns; i++){
-            printf("Enter the element : \n");
+    //Initializing Array 2...
+    printf("\n ---Enter the elements of Second Array---\n ");
+    for(int i = 0; i < Rows; i++){
+        for(int j = 0; j < Columns; j++){
+            printf("Enter the element :");
             scanf("%d",&B[i][j]);
         }
     }
-    //Calculating sum of arrays..
-    int Sum[Rows][Columns];
-    for(int i = 0; i < Rows; i++){
-        for(int j = 0; j < Columns; j++){
-            Sum[i][j] = A[i][j]+B[i][j];
+    int choice;
+    printf("\n 1. Sum \n 2. Product \n 3. Exit \n");
+
+    
+    while(1){
+        printf("Enter your choice :");
+        scanf("%d",&choice);
+        if(choice == 1){
+            Sum(Rows, Columns, A,B);
+        }
+        else if(choice == 2){
+            Product(Rows, Columns, A,B);
+        }
+        else if(choice == 3){
+            printf("EXIT");
+            break;
+        }
+        else{
+            printf("INVALID CHOICE");
         }
     }
 
-    //Displaying the Sum Array..
-    for(int i = 0; i < Rows; i++){
-        for(int j = 0; j < Columns; j++){
-            printf("%d\t",Sum[i][j]);
-            
-        }
-        printf("\n");
-    }
     return 0;
 }
