@@ -41,7 +41,7 @@ void Product(int R, int C, int A[R][C],int B[R][C]){
     Display(R,C,Product);
 }
 int main(){
-    int A[10][10], B[10][10], Rows,Columns;
+    int Rows,Columns;
     bool t = true;
     printf("Enter Rows & Columns < 10 and > 0\n");
     while(t){
@@ -52,6 +52,7 @@ int main(){
 
         Validation(Rows, Columns,&t);
     }
+    int A[Rows][Columns], B[Rows][Columns];
     //Initializing Array 1...
     printf("\n ---Enter the elements of First Array---\n ");
     for(int i = 0; i < Rows; i++){
@@ -60,6 +61,7 @@ int main(){
             scanf("%d",&A[i][j]);
         }
     }
+    Display(Rows, Columns, A);
 
     //Initializing Array 2...
     printf("\n ---Enter the elements of Second Array---\n ");
@@ -69,6 +71,7 @@ int main(){
             scanf("%d",&B[i][j]);
         }
     }
+    Display(Rows, Columns, B);
     int choice;
     printf("\n 1. Sum \n 2. Product \n 3. Exit \n");
 
