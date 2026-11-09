@@ -1,7 +1,7 @@
 # Data Structures and Algorithms 
 This Repository contain all the learning from beginner to advance on DSA in C language.
 Through this you can also learn the basic concepts of C language along with DSA.
-This Repository is Completely beginner friendly, thus it contain various highly basic elements of the language too.
+This Repository is Completely beginner friendly and contain various highly basic elements of the language too.
 
 ## Tips 
 1. Try to design the programme using functions:- 
