@@ -73,6 +73,143 @@ Call by reference is a method of passing the address of a variable to a function
 **Note:** VLA stands for Variable Length Array, while FLA refers to Fixed Length Array.
 
 ---
+## 🔗 Singly Linked List – Insertion and Deletion
+
+This program demonstrates the implementation of a **Singly Linked List in C** using dynamic memory allocation.
+
+It allows users to perform insertion and deletion operations at different positions in a linked list. The program uses structures, pointers, functions, and dynamic memory allocation to manage nodes efficiently.
+
+### 📌 Operations Performed
+
+**1. Insertion**
+- Insertion at the Beginning
+- Insertion at the Ending
+- Insertion at a Specific Position
+
+**2. Deletion**
+- Deletion from the Beginning
+- Deletion from the Ending
+- Deletion from a Specific Position
+
+---
+
+### 🧠 Key Concepts Used
+
+**1. Structures (`struct`)**
+
+A structure is used to create a node containing two members:
+- `data`: Stores the value of the node.
+- `next`: Stores the address of the next node.
+
+**2. Dynamic Memory Allocation**
+
+`malloc()` is used to allocate memory dynamically whenever a new node is created.
+
+`free()` is used to release the memory occupied by a deleted node.
+
+**3. Pointers**
+
+Pointers are used to establish connections between different nodes and traverse the linked list.
+
+**4. Call by Reference (Pointer to Pointer)**
+
+The functions `Insertion()` and `Deletion()` accept `struct node **start` as an argument.
+
+This allows the functions to modify the original head pointer whenever insertion or deletion takes place at the beginning.
+
+**5. Traversal**
+
+A temporary pointer (`temp`) is used to traverse the linked list and access the required nodes without modifying the head pointer.
+
+**6. Modular Programming**
+
+The program is divided into separate functions:
+- `Display()` – Displays all the nodes.
+- `Insertion()` – Performs insertion operations.
+- `Deletion()` – Performs deletion operations.
+
+---
+
+### ⚙️ Working of the Program
+
+1. The user enters the initial number of nodes.
+2. The program creates the linked list using dynamic memory allocation.
+3. A menu is displayed to select between insertion, deletion, and exit.
+4. Based on the user's choice, the corresponding function is called.
+5. The selected operation is performed on the linked list.
+6. The updated linked list is displayed.
+7. The menu continues until the user selects Exit.
+
+---
+
+### 💻 Compilation and Execution
+
+**Compile the program:**
+
+```bash
+gcc LinkedList.c -o LinkedList
+```
+
+**Run the program:**
+
+```bash
+./LinkedList
+```
+
+For Windows:
+
+```bash
+LinkedList.exe
+```
+
+---
+
+### 📷 Sample Output
+
+```text
+--- Linked List ---
+Enter the initial number of nodes required:
+3
+
+Enter the data of the node: 10
+Enter the data of the node: 20
+Enter the data of the node: 30
+
+1. Insertion
+2. Deletion
+3. Exit
+
+Enter your choice: 1
+
+--- Performing Insertion ---
+
+1. Insertion at Beginning
+2. Insertion at Ending
+3. Insertion at Specific Position
+
+Enter your choice: 1
+Enter the data of the node: 5
+
+--- List After Insertion ---
+5    10    20    30
+```
+
+---
+
+### 🎯 Learning Outcomes
+
+Through this program, the following concepts can be understood:
+
+- Implementation of a Singly Linked List.
+- Dynamic memory allocation and deallocation.
+- Working with structures and pointers.
+- Insertion and deletion of nodes.
+- Traversal and manipulation of linked lists.
+- Passing pointers by reference to functions.
+
+---
+
+**Note:** This program is part of my journey of learning Data Structures and Algorithms using C. It focuses on understanding how linked lists work through practical implementation.
 
 ## 🎯 Repository Goals
 
