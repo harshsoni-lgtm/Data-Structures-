@@ -14,7 +14,7 @@ In Practical 1, Insertion and Deletion have been performed on an Array.
 1. Decremented/incremented Length of the array after each case instead of only at the beginning or ending of the function in order to ensure length is updated only on valid choice.
 2. choice_1, choice_2, choice_3 are taken to avoid confusion (naming collision).
 
-## Sum_of_Two_Arrays
+## Operation on Arrays
 Programme also contain the concept of VLA (Variable Length Array) 
 This is a programme to add to given arrays.
 In this we have added 2 2-Dimensional arrays.
@@ -29,7 +29,7 @@ It is a method of passing a argument to the function through function.
 It allow direct updation, avoid the need of return statement.
 
 ### Concept of VLA and FLA
-VLA stand for Variable length array whose size/dimension are set by user instead of prededining them.
+VLA stand for Variable length array whose size/dimension are set by user instead of predefining them.
 FLA stand for Fixed Length Arrays where size/dimension of array are predefined.
 VLA helps in optimum memory utilization
 
