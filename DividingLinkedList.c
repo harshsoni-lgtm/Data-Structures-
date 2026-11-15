@@ -103,8 +103,6 @@ void Insertion(struct node **start){
         newnode->next = NULL;
         return;
     }
-    
-    
         printf("\n 1. Insertion at Beginning \n 2. Insertion at Ending \n 3. Insertion at Specific Position \n");
         printf("Enter your choice :");
         scanf("%d",&choice_i);
